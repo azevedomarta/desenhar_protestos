@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'normal';
+    src: url(ABCFavorit-Book-Trial.otf);
+}
+
+@font-face {
+    font-family: 'italico';
+    src: url(ABCFavorit-BookItalic-Trial.otf);
+}
+
+/**********************************************/
+
+html {
+    overflow: hidden;
+    overflow-x: hidden;
+
+  }
+
+::-webkit-scrollbar {
+    width: 0px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    } 
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    color: black;
+    background-color: white;
+    font-family: 'normal'; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    cursor: url('cursor_1.png'), auto;
+}
+
+/**********************************************/
+
+.container {
+    position: absolute; 
+    top: 20px; 
+    left: 20px; 
+    cursor: pointer;
+}
+
+.button {
+    font-size: 28px;
+    color: black;
+    text-align: left;
+    display: inline-block; /* inline-block para controlar de largura e posicionamento */
+    text-decoration: none;
+    margin-right: 40px;
+    margin-left: 5px;
+    position: relative; /* adicionado para restringir o ::after a este elemento */
+    cursor: url('cursor_2.png'), auto;
+}
+
+.button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.3px; /* ajustar a posição para alinhar abaixo do texto */
+    width: 0;
+    height: 3px;
+    background-color: #000000; /* cor do sublinhado */
+}
+
+.button:hover::after {
+    width: 100%; /* apenas o botão em hover será sublinhado */
+}
+
+
+/**********************************************/
+
+.gif_container {
+    width: 1100px; 
+    top: 50%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/**********************************************/
+
+@media (max-width: 768px) {
+    .container {
+        align-items: center;
+        text-align: center;
+    }
+    .button {
+        font-size: 1rem;
+    }
+}

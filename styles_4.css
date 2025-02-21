@@ -1,0 +1,209 @@
+@font-face {
+    font-family: 'normal';
+    src: url(ABCFavorit-Book-Trial.otf);
+}
+
+@font-face {
+    font-family: 'italico';
+    src: url(ABCFavorit-BookItalic-Trial.otf);
+}
+
+@font-face {
+    font-family: 'light';
+    src: url(ABCFavorit-Light-Trial.otf);
+}
+
+/**********************************************/
+
+html {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+::-webkit-scrollbar {
+    width: 0px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    } 
+
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    color: black;
+    background-color: white;
+    font-family: 'normal'; 
+    display: flex; 
+    cursor: url('cursor_1.png'), auto;
+}
+
+/**********************************************/
+
+.container {
+    position: absolute; 
+    top: 20px; 
+    left: 20px; 
+    cursor: pointer;
+    z-index: 999999;
+}
+
+.button {
+    font-size: 28px;
+    color: black;
+    text-align: left;
+    display: inline-block; 
+    text-decoration: none;
+    margin-right: 40px;
+    margin-left: 5px;
+    position: relative; 
+    cursor: url('cursor_2.png'), auto;
+}
+
+.button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.3px; 
+    width: 0;
+    height: 3px;
+    background-color: #000000; 
+}
+
+.button:hover::after {
+    width: 100%; 
+}
+
+/**********************************************/
+
+.image_button {
+    position: fixed; 
+    bottom: 15px; 
+    left: 30px; 
+    margin: 0; 
+    padding: 0;
+    z-index: 99; 
+}
+
+.image_link img {
+    width: 58px; 
+    cursor: url('cursor_2.png'), auto;
+}
+
+/**********************************************/
+
+.image_container {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px; /* Ajuste conforme necessário */
+    height: auto;
+    cursor: url('cursor_2.png'), auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image_container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/**********************************************/
+
+.image_2 {
+    position: fixed; 
+    margin: 0; 
+    padding: 0;
+    z-index: 9999; 
+    width: 70px; 
+    cursor: url('cursor_2.png'), auto;
+    bottom: 15px; 
+    right: 30px; 
+}
+
+
+/**********************************************/
+
+.popup {
+  position: relative;
+  display: contents;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.popuptext {
+  visibility: hidden;
+  top: 0;
+  overflow-y: scroll;
+  height: 100%;
+  width: 50%;
+  margin-left: 58%;
+  background-color: #fffdfdbe;
+  position: absolute;
+  z-index: 555;
+}
+
+p {
+  padding: 0;
+  font-size: 22px;
+  text-align: justify;
+  margin-right: 20%;
+  margin-left: 2%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.text_1 {
+  margin-top: 2.5%;
+}
+
+
+.indent {
+  text-indent: 25px;
+}
+
+em {
+  font-family: 'italico';
+}
+
+.popup .show {
+  visibility: visible;
+}
+
+/**********************************************/
+
+@media (max-width: 1024px) {
+  .container {
+      flex-direction: column;
+      top: 10px;
+      left: 10px;
+  }
+  .button {
+      font-size: 1.5rem;
+  }
+  .popuptext {
+      font-size: 1.1rem;
+      margin-left: 58%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+      align-items: center;
+      text-align: center;
+  }
+  .button {
+      font-size: 1rem;
+  }
+  .popuptext {
+      font-size: 1rem;
+      margin-left: 57%;
+  }
+}

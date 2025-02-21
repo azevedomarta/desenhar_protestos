@@ -1,0 +1,241 @@
+@font-face {
+    font-family: 'normal';
+    src: url(ABCFavorit-Book-Trial.otf);
+}
+
+@font-face {
+    font-family: 'italico';
+    src: url(ABCFavorit-BookItalic-Trial.otf);
+}
+
+/**********************************************/
+
+html {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+::-webkit-scrollbar {
+    width: 0px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    } 
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    color: black;
+    background-color: white;
+    font-family: 'normal'; 
+    display: flex; 
+    cursor: url('cursor_1.png'), auto;
+}
+
+/**********************************************/
+
+.container {
+    position: absolute; 
+    top: 20px; 
+    left: 20px; 
+}
+
+.button {
+    font-size: 28px;
+    color: black;
+    text-align: left;
+    display: inline-block; 
+    text-decoration: none;
+    margin-right: 40px;
+    margin-left: 5px;
+    position: relative; 
+}
+
+.button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.3px; 
+    width: 0;
+    height: 3px;
+    background-color: #000000; 
+}
+
+.button:hover::after {
+    width: 100%; 
+}
+
+a{
+  cursor: url('cursor_2.png'), auto;
+}
+
+/**********************************************/
+
+.image_button {
+    position: fixed; 
+    bottom: 15px; 
+    left: 30px; 
+    margin: 0; 
+    padding: 0;
+    z-index: 20; 
+}
+
+.image-link img {
+    width: 58px; 
+}
+
+/**********************************************/
+
+/* Carousel */
+:root { /* variáveis */
+  --no-of-slides: 27;  
+  --slides-in-view: 10;
+  --slide-width: 610px; /* 600 px ( width da imagem) + 10 px (margem) */
+  --slide-height: 390px;
+  --iteration-time: 100s;
+  align-items: center;
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(calc(var(--slide-width) * var(--no-of-slides) * -1));
+  }
+}
+
+.carousel__wrapper {
+  display: flex;
+  align-items: center;
+  width: calc(var(--slides-in-view) * var(--slide-width));
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.carousel {
+  padding: 170px 0;
+  overflow: hidden;
+  width: calc(2 * var(--no-of-slides));
+}
+
+.carousel__slide {
+  animation: scroll var(--iteration-time) linear infinite;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  flex: 0 0 auto;
+  width: var(--slide-width);
+  height: var(--slide-height);
+  box-sizing: border-box;
+}
+
+.carousel__image {
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%; 
+  width: 500px; 
+}
+
+
+.carousel__wrapper:hover .carousel__slide {
+  animation-play-state: paused;
+  cursor: url('pausa_1.png'), auto;
+}
+
+/**********************************************/
+
+.image_2 {
+    position: fixed; 
+    margin: 0; 
+    padding: 0;
+    z-index: 9999; 
+    width: 70px; 
+    cursor: url('cursor_2.png'), auto;
+    bottom: 15px; 
+    right: 30px; 
+}
+
+
+/**********************************************/
+
+.popup {
+  position: relative;
+  display: contents;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.popuptext {
+  visibility: hidden;
+  top: 0;
+  overflow-y: scroll;
+  height: 100%;
+  width: 50%;
+  margin-left: 58%;
+  background-color: #fffdfdbe;
+  position: absolute;
+  z-index: 555;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+  text-align: justify;
+  margin-right: 20%;
+  margin-left: 2%;
+}
+
+.text_1 {
+  margin-top: 2.5%;
+}
+
+
+.indent {
+  text-indent: 25px;
+}
+
+em {
+  font-family: 'italico';
+}
+
+.popup .show {
+  visibility: visible;
+}
+
+/**********************************************/
+
+@media (max-width: 1024px) {
+  .container {
+      flex-direction: column;
+      top: 10px;
+      left: 10px;
+  }
+  .button {
+      font-size: 1.5rem;
+  }
+  .popuptext {
+      font-size: 1.1rem;
+      margin-left: 58%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+      align-items: center;
+      text-align: center;
+  }
+  .button {
+      font-size: 1rem;
+  }
+  .popuptext {
+      font-size: 1rem;
+      margin-left: 57%;
+  }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+
+<head> 
+    <title>desenhar_protestos</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles_4.css">
+</head>
+
+<body> 
+    <div class="container">
+        <a href="index_2.html" class="button">HISTÓRIA</a> 
+        <a href="index_4.html" class="button">TOOLKIT</a> 
+        <a href="index_3.html" class="button">GALERIA</a>
+    </div>
+
+    <div class="image_button">
+        <a href="index.html" class="image_link">
+            <img src="Casa.gif">
+        </a>
+    </div>
+
+    <div class="image_container">
+        <img id="clickable-image" src="toolkit/t_1.png">
+    </div>    
+
+    <script>
+        // Seleciona a imagem corretamente
+        const image = document.getElementById("clickable-image");
+
+        // Define os caminhos das imagens e do GIF
+        const staticImage = "toolkit/t_1.png"; // Primeira imagem
+        const gifImage = "toolkit/gif_1.gif"; // GIF 
+        const finalImage = "toolkit/t_2.png"; // última imagem
+
+        // Adiciona o clique
+        image.addEventListener("click", function() {
+        // Troca para o GIF e força recarga
+        image.src = gifImage + "?t=" + new Date().getTime();
+
+    
+        // Espera o tempo do GIF para trocar para a última imagem
+        setTimeout(function() {
+            image.src = finalImage; // Troca para a imagem final
+            image.style.width = "600px";  // Ajusta novamente para o tamanho original da imagem estática
+        }, 2400); // (duração do GIF)
+        });
+    </script>
+
+<!----------------------->
+
+<div class="popup" onclick="myFunction()">
+    <img class="image_2" src="olho.gif">
+    <div class="popuptext" id="myPopup">
+    <div class="text_1">
+        <p>O <em>toolkit Desenhar Protestos</em>, foi desenvolvido com o objetivo de fornecer todos os materiais facilitadores necessários para a implementação da atividade. </p>
+        <p class="indent">Dentro do <em>toolkit</em>, colocamos um documento explicativo da estrutura da atividade, que permite que seja adaptada a diferentes contextos. A atividade está dividida em três principais momentos, que são descritos de forma flexível, podendo ser moldados e alterados.</p>
+        <p class="indent">Desenhamos quinze cartões com imagens legendadas, títulos e curtos excertos de artigos noticiários, para incentivar a reflexão, a partilha e a discussão política, podendo as crianças comentar sobre os temas apresentados, como também explorar temáticas variadas.</p>
+        <p class="indent">Os dez carimbos fornecidos no <em>toolkit</em> foram ilustrados com base num estudo das expressões gráficas de protesto. Podem ser aplicados com diferentes intenções e para diferentes lutas, auxiliando as crianças participantes a comunicar as suas ideias visualmente poderosas, na atividade <em>Desenhar Protestos</em>.</p>
+    </div>
+</div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var popup = document.getElementById("myPopup");
+        var trigger = document.querySelector(".popup");
+    
+        trigger.addEventListener("click", function(event) {
+            event.stopPropagation(); // Impede que o clique na imagem ou popup feche imediatamente
+            popup.classList.toggle("show");
+        });
+    
+        document.addEventListener("click", function(event) {
+            if (!popup.contains(event.target) && !trigger.contains(event.target)) {
+                popup.classList.remove("show");
+            }
+        });
+    });
+    </script>
+
+
+</body>
+
+</html>
