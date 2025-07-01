@@ -1,97 +1,98 @@
 @font-face {
-    font-family: 'normal';
-    src: url(ABCFavorit-Book-Trial.otf);
+  font-family: "normal";
+  src: url(ABCFavorit-Book-Trial.otf);
 }
 
 @font-face {
-    font-family: 'italico';
-    src: url(ABCFavorit-BookItalic-Trial.otf);
+  font-family: "italico";
+  src: url(ABCFavorit-BookItalic-Trial.otf);
 }
 
 /**********************************************/
 
 html {
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-  }
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
 
 ::-webkit-scrollbar {
-    width: 0px;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    } 
+  width: 0px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 
 body {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    color: black;
-    background-color: white;
-    font-family: 'normal'; 
-    display: flex; 
-    cursor: url('cursor_1.png'), auto;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  color: black;
+  background-color: white;
+  font-family: "normal";
+  display: flex;
+  cursor: url("cursor_1.png"), auto;
 }
 
 /**********************************************/
 
 .container {
-    position: absolute; 
-    top: 20px; 
-    left: 20px; 
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 
 .button {
-    font-size: 28px;
-    color: black;
-    text-align: left;
-    display: inline-block; 
-    text-decoration: none;
-    margin-right: 40px;
-    margin-left: 5px;
-    position: relative; 
+  font-size: 28px;
+  color: black;
+  text-align: left;
+  display: inline-block;
+  text-decoration: none;
+  margin-right: 40px;
+  margin-left: 5px;
+  position: relative;
 }
 
 .button::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -0.3px; 
-    width: 0;
-    height: 3px;
-    background-color: #000000; 
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.3px;
+  width: 0;
+  height: 3px;
+  background-color: #000000;
 }
 
 .button:hover::after {
-    width: 100%; 
+  width: 100%;
 }
 
-a{
-  cursor: url('cursor_2.png'), auto;
+a {
+  cursor: url("cursor_2.png"), auto;
 }
 
 /**********************************************/
 
 .image_button {
-    position: fixed; 
-    bottom: 15px; 
-    left: 30px; 
-    margin: 0; 
-    padding: 0;
-    z-index: 20; 
+  position: fixed;
+  bottom: 15px;
+  left: 30px;
+  margin: 0;
+  padding: 0;
+  z-index: 20;
 }
 
 .image-link img {
-    width: 58px; 
+  width: 58px;
 }
 
 /**********************************************/
 
 /* Carousel */
-:root { /* variáveis */
-  --no-of-slides: 27;  
+:root {
+  /* variáveis */
+  --no-of-slides: 27;
   --slides-in-view: 10;
   --slide-width: 610px; /* 600 px ( width da imagem) + 10 px (margem) */
   --slide-height: 390px;
@@ -101,10 +102,10 @@ a{
 
 @keyframes scroll {
   0% {
-      transform: translateX(0);
+    transform: translateX(0);
   }
   100% {
-      transform: translateX(calc(var(--slide-width) * var(--no-of-slides) * -1));
+    transform: translateX(calc(var(--slide-width) * var(--no-of-slides) * -1));
   }
 }
 
@@ -136,29 +137,27 @@ a{
 .carousel__image {
   background-size: contain;
   background-repeat: no-repeat;
-  height: 100%; 
-  width: 500px; 
+  height: 100%;
+  width: 500px;
 }
-
 
 .carousel__wrapper:hover .carousel__slide {
   animation-play-state: paused;
-  cursor: url('pausa_1.png'), auto;
+  cursor: url("pausa_1.png"), auto;
 }
 
 /**********************************************/
 
 .image_2 {
-    position: fixed; 
-    margin: 0; 
-    padding: 0;
-    z-index: 9999; 
-    width: 70px; 
-    cursor: url('cursor_2.png'), auto;
-    bottom: 15px; 
-    right: 30px; 
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  z-index: 9999;
+  width: 70px;
+  cursor: url("cursor_2.png"), auto;
+  bottom: 15px;
+  right: 30px;
 }
-
 
 /**********************************************/
 
@@ -196,13 +195,13 @@ p {
   margin-top: 2.5%;
 }
 
-
 .indent {
   text-indent: 25px;
 }
 
 em {
-  font-family: 'italico';
+  font-family: "italico";
+  font-style: normal;
 }
 
 .popup .show {
@@ -213,29 +212,29 @@ em {
 
 @media (max-width: 1024px) {
   .container {
-      flex-direction: column;
-      top: 10px;
-      left: 10px;
+    flex-direction: column;
+    top: 10px;
+    left: 10px;
   }
   .button {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
   .popuptext {
-      font-size: 1.1rem;
-      margin-left: 58%;
+    font-size: 1.1rem;
+    margin-left: 58%;
   }
 }
 
 @media (max-width: 768px) {
   .container {
-      align-items: center;
-      text-align: center;
+    align-items: center;
+    text-align: center;
   }
   .button {
-      font-size: 1rem;
+    font-size: 1rem;
   }
   .popuptext {
-      font-size: 1rem;
-      margin-left: 57%;
+    font-size: 1rem;
+    margin-left: 57%;
   }
 }

@@ -1,163 +1,161 @@
 @font-face {
-    font-family: 'normal';
-    src: url(ABCFavorit-Book-Trial.otf);
+  font-family: "normal";
+  src: url(ABCFavorit-Book-Trial.otf);
 }
 
 @font-face {
-    font-family: 'italico';
-    src: url(ABCFavorit-BookItalic-Trial.otf);
+  font-family: "italico";
+  src: url(ABCFavorit-BookItalic-Trial.otf);
 }
 
 @font-face {
-    font-family: 'light';
-    src: url(ABCFavorit-Light-Trial.otf);
+  font-family: "light";
+  src: url(ABCFavorit-Light-Trial.otf);
 }
 
 /**********************************************/
 
 html {
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-  }
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
 
 ::-webkit-scrollbar {
-    width: 0px;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    } 
+  width: 0px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 
 body {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
-    color: black;
-    background-color: white;
-    font-family: 'normal'; 
-    cursor: url('cursor_1.png'), auto;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  color: black;
+  background-color: white;
+  font-family: "normal";
+  cursor: url("cursor_1.png"), auto;
 }
 
 /**********************************************/
 
 .container {
-    position: fixed; 
-    top: 20px; 
-    left: 20px; 
-    cursor: pointer;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
 }
 
 .button {
-    font-size: 28px;
-    color: black;
-    text-align: left;
-    display: inline-block; 
-    text-decoration: none;
-    margin-right: 40px;
-    margin-left: 5px;
-    position: relative; 
-    cursor: url('cursor_2.png'), auto;
+  font-size: 28px;
+  color: black;
+  text-align: left;
+  display: inline-block;
+  text-decoration: none;
+  margin-right: 40px;
+  margin-left: 5px;
+  position: relative;
+  cursor: url("cursor_2.png"), auto;
 }
 
 .button::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -0.3px; 
-    width: 0;
-    height: 3px;
-    background-color: #000000; 
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.3px;
+  width: 0;
+  height: 3px;
+  background-color: #000000;
 }
 
 .button:hover::after {
-    width: 100%; 
+  width: 100%;
 }
-
 
 /**********************************************/
 
 .image_button {
-    position: fixed; 
-    bottom: 15px; 
-    left: 30px; 
-    margin: 0; 
-    padding: 0;
-    z-index: 99; 
+  position: fixed;
+  bottom: 15px;
+  left: 30px;
+  margin: 0;
+  padding: 0;
+  z-index: 99;
 }
 
 .image_link img {
-    width: 58px; 
-    cursor: url('cursor_2.png'), auto;
+  width: 58px;
+  cursor: url("cursor_2.png"), auto;
 }
 
 /**********************************************/
 
 p {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .text {
-    font-size: 22px;
-    text-align: justify;
-    margin-left: 59%;
-    margin-right: 2%;
-    margin-top: 1%;
-    margin-bottom: 0;
-    overflow-y: scroll;
+  font-size: 22px;
+  text-align: justify;
+  margin-left: 59%;
+  margin-right: 2%;
+  margin-top: 1%;
+  margin-bottom: 0;
+  overflow-y: scroll;
 }
 
 .indent {
-    text-indent: 25px;
+  text-indent: 25px;
 }
 
 .fim {
-    font-family: 'light';
-    font-size: 15px;
-    text-align: justify;
-    margin-top: 17px;
-    margin-bottom: 0;
+  font-family: "light";
+  font-size: 15px;
+  text-align: justify;
+  margin-top: 17px;
+  margin-bottom: 0;
 }
 
 em {
-    font-family: 'italico';
+  font-family: "italico";
+  font-style: normal;
 }
 
 /**********************************************/
 
 @media (max-width: 1024px) {
-    .container {
-        flex-direction: column;
-        top: 10px;
-        left: 10px;
-    }
-    .button {
-        font-size: 1.5rem;
-    }
-    .text {
-        font-size: 1.1rem;
-        margin-left: 58%;
-    }
-    .fim{
-        font-size: 0.9rem;
-    }
+  .container {
+    flex-direction: column;
+    top: 10px;
+    left: 10px;
+  }
+  .button {
+    font-size: 1.5rem;
+  }
+  .text {
+    font-size: 1.1rem;
+    margin-left: 58%;
+  }
+  .fim {
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 768px) {
-    .container {
-        align-items: center;
-        text-align: center;
-    }
-    .button {
-        font-size: 1rem;
-    }
-    .text {
-        font-size: 1rem;
-        margin-left: 56%;
-    }
-    .fim{
-        font-size: 0.7rem;
-    }
+  .container {
+    align-items: center;
+    text-align: center;
+  }
+  .button {
+    font-size: 1rem;
+  }
+  .text {
+    font-size: 1rem;
+    margin-left: 56%;
+  }
+  .fim {
+    font-size: 0.7rem;
+  }
 }
-
-
