@@ -1,39 +1,36 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-
-<head> 
+  <head>
     <title>Desenhar Protestos</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
-
+  <body>
     <div class="container">
-        <a href="index_2.html" class="button">HISTÓRIA</a> 
-        <a href="index_4.html" class="button">TOOLKIT</a> 
-        <a href="index_3.html" class="button">GALERIA</a>
+      <a href="index_2.html" class="button">HISTÓRIA</a>
+      <a href="index_4.html" class="button">TOOLKIT</a>
+      <a href="index_3.html" class="button">GALERIA</a>
     </div>
 
     <div class="gif_container">
-        <img id="first-gif" src="gif_1_1.gif">
-        <img id="second-gif" src="gif_2_2.gif" style="display: none">
+      <img id="first-gif" src="gif_1_1.gif" />
+      <img id="second-gif" src="gif_2_2.gif" style="display: none" />
     </div>
 
-<script>
-    // Configuração do tempo do primeiro GIF
-    const firstGifDuration = 2450; // Duração do primeiro GIF em milissegundos,era 1300 
-    
-    const firstGif = document.getElementById("first-gif");
-    const secondGif = document.getElementById("second-gif");
-    
-    // Troca para o segundo GIF 
-    setTimeout(() => {
+    <script>
+      // Configuração do tempo do primeiro GIF
+      const firstGifDuration = 2450; // Duração do primeiro GIF em milissegundos,era 1300
+
+      const firstGif = document.getElementById("first-gif");
+      const secondGif = document.getElementById("second-gif");
+
+      // Troca para o segundo GIF
+      setTimeout(() => {
         firstGif.style.display = "none";
         secondGif.style.display = "block";
-    }, firstGifDuration);
-</script>
-
-</body>
+      }, firstGifDuration);
+    </script>
+  </body>
 </html>
